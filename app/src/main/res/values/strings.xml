@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="team">Enter Team Name</string>
+    <string name="score_view">0</string>
+    <string name="first_team">Manchester United</string>
+    <string name="second_team">Arsenal</string>
+    <string name="goal_for_first_team">Goal</string>
+    <string name="fault_for_first_team">Fault</string>
+    <string name="penalty_for_first_team">Penalty</string>
+    <string name="corner_for_first_team">Corner</string>
+    <string name="red_card_for_first_team">Red Card</string>
+    <string name="goal_for_second_team">Goal</string>
+    <string name="fault_for_second_team">Fault</string>
+    <string name="penalty_for_second_team">Penalty</string>
+    <string name="corner_for_second_team">Corner</string>
+    <string name="red_card_for_second_team">Red Card</string>
+    <string name="new_game">New Game</string>
+
+</resources>
