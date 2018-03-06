@@ -3,21 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <RelativeLayout
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/background"/>
+        android:src="@drawable/background" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -28,94 +28,57 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/manchester"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:scaleType="fitCenter"
-                android:paddingTop="8dp"
-                android:src="@drawable/manchester"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:text="@string/first_team"
-                android:textColor="#616161"
-                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/first_team_name"
+                style="@style/EditTextTeamNameStyle"
+                android:cursorVisible="true"
+                android:focusable="true"
+                android:hint="@string/team"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/second_team_name" />
 
             <TextView
                 android:id="@+id/first_team_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp" />
+                style="@style/TeamScoreStyle"
+                android:text="@string/score_view" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
                 android:onClick="goalForFirstTeam"
                 android:text="@string/goal_for_first_team" />
+
             <TextView
                 android:id="@+id/first_team_fault"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:paddingTop="16dp"
-                android:gravity="center"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                style="@style/TeamStatisticStyle"
+                android:paddingTop="@dimen/fault_score_padding_top"
+                android:text="@string/score_view" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
+                android:layout_marginBottom="@dimen/button_margin"
                 android:onClick="faultForFirstTeam"
                 android:text="@string/fault_for_first_team" />
+
             <TextView
                 android:id="@+id/first_team_penalty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                style="@style/TeamStatisticStyle"
+                android:text="@string/score_view" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
                 android:onClick="penaltyForFirstTeam"
                 android:text="@string/penalty_for_first_team" />
+
             <TextView
                 android:id="@+id/first_team_corner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                style="@style/TeamStatisticStyle"
+                android:text="@string/score_view" />
+
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
                 android:onClick="cornerForFirstTeam"
                 android:text="@string/corner_for_first_team" />
 
@@ -124,7 +87,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/view_margin_top"
             android:background="@android:color/darker_gray" />
 
         <LinearLayout
@@ -133,93 +96,56 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/arsenal"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:scaleType="fitCenter"
-                android:paddingTop="8dp"
-                android:src="@drawable/arsenal"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:text="@string/second_team"
-                android:textColor="#616161"
-                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/second_team_name"
+                style="@style/EditTextTeamNameStyle"
+                android:cursorVisible="true"
+                android:focusable="true"
+                android:hint="@string/team"
+                android:imeOptions="actionDone"
+                android:inputType="text" />
 
             <TextView
                 android:id="@+id/second_team_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp" />
+                style="@style/TeamScoreStyle"
+                android:text="@string/score_view" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
-                android:layout_marginTop="8dp"
+                style="@style/ScoreButtonStyle"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
                 android:onClick="goalForSecondTeam"
                 android:text="@string/goal_for_second_team" />
+
             <TextView
                 android:id="@+id/second_team_fault"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:paddingTop="16dp"
-                android:gravity="center"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                style="@style/TeamStatisticStyle"
+                android:paddingTop="@dimen/fault_score_padding_top"
+                android:text="@string/score_view" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
+                android:layout_marginBottom="@dimen/button_margin"
                 android:onClick="faultForSecondTeam"
                 android:text="@string/fault_for_second_team" />
+
             <TextView
-                android:id="@+id/second_team_penalty"                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:id="@+id/second_team_penalty"
+                style="@style/TeamStatisticStyle"
+                android:text="@string/score_view" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
                 android:onClick="penaltyForSecondTeam"
                 android:text="@string/penalty_for_second_team" />
+
             <TextView
                 android:id="@+id/second_team_corner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:text="@string/score_view"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                style="@style/TeamStatisticStyle"
+                android:text="@string/score_view" />
+
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
+                style="@style/ScoreButtonStyle"
                 android:onClick="cornerForSecondTeam"
                 android:text="@string/corner_for_second_team" />
 
@@ -228,11 +154,7 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="8dp"
+        style="@style/NewGameButtonStyle"
         android:onClick="newGame"
         android:text="@string/new_game" />
 
