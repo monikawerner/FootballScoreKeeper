@@ -15,5 +15,6 @@
     <string name="corner_for_second_team">Corner</string>
     <string name="red_card_for_second_team">Red Card</string>
     <string name="new_game">New Game</string>
+    <string name="enter">Enter Team Name</string>
 
 </resources>

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText secondTeam = (EditText) findViewById(R.id.second_team_name);
+        EditText secondTeam = findViewById(R.id.second_team_name);
         secondTeam.clearFocus();
         secondTeam.setCursorVisible(false);
     }
@@ -99,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void newGame(View view) {
 
-        EditText firstTeam = (EditText) findViewById(R.id.first_team_name);
-        EditText secondTeam = (EditText) findViewById(R.id.second_team_name);
-        firstTeam.setText("Enter Team Name");
-        secondTeam.setText("Enter Team Name");
+        EditText firstTeam = findViewById(R.id.first_team_name);
+        EditText secondTeam = findViewById(R.id.second_team_name);
+        firstTeam.setText(getString(R.string.enter));
+        secondTeam.setText(getString(R.string.enter));
         secondTeam.clearFocus();
 
         scoreFirstTeam = 0;
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for First Team.
      */
     public void displayScoreForFirstTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.first_team_score);
+        TextView scoreView = findViewById(R.id.first_team_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Second Team.
      */
     public void displayScoreForSecondTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.second_team_score);
+        TextView scoreView = findViewById(R.id.second_team_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given faults for First Team.
      */
     public void displayFaultsForFirstTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.first_team_fault);
+        TextView scoreView = findViewById(R.id.first_team_fault);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given faults for Second Team.
      */
     public void displayFaultsForSecondTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.second_team_fault);
+        TextView scoreView = findViewById(R.id.second_team_fault);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given penalties for First Team.
      */
     public void displayPenaltiesForFirstTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.first_team_penalty);
+        TextView scoreView = findViewById(R.id.first_team_penalty);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given penalties for Second Team.
      */
     public void displayPenaltiesForSecondTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.second_team_penalty);
+        TextView scoreView = findViewById(R.id.second_team_penalty);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given corners for First Team.
      */
     public void displayCornersForFirstTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.first_team_corner);
+        TextView scoreView = findViewById(R.id.first_team_corner);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given corners for Second Team.
      */
     public void displayCornersForSecondTeam(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.second_team_corner);
+        TextView scoreView = findViewById(R.id.second_team_corner);
         scoreView.setText(String.valueOf(score));
     }
 }

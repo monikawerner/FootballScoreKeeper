@@ -1,6 +1,5 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <RelativeLayout
@@ -34,7 +33,7 @@
                 android:cursorVisible="true"
                 android:focusable="true"
                 android:hint="@string/team"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionNext|flagNoExtractUi"
                 android:inputType="text"
                 android:nextFocusForward="@id/second_team_name" />
 
@@ -102,7 +101,7 @@
                 android:cursorVisible="true"
                 android:focusable="true"
                 android:hint="@string/team"
-                android:imeOptions="actionDone"
+                android:imeOptions="actionDone|flagNoExtractUi"
                 android:inputType="text" />
 
             <TextView

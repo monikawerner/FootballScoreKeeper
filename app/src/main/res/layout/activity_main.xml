@@ -31,7 +31,7 @@
                 android:focusable="true"
                 android:hint="@string/team"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:nextFocusForward="@id/second_team_name" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:focusable="true"
                 android:hint="@string/team"
                 android:imeOptions="actionDone"
-                android:inputType="text" />
+                android:inputType="textCapSentences" />
 
             <TextView
                 android:id="@+id/second_team_score"
